@@ -1,3 +1,24 @@
 html {
   color: #006700;
 }
+
+.grid {
+  display: grid;
+  max-width: 1185px;
+  grid-template-columns: repeat(auto-fill, 395px);
+  justify-items: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.portrait {
+  height: 340px;
+}
+
+a[target="_blank"] img {
+  cursor: zoom-in;
+}
