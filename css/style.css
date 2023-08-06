@@ -23,6 +23,10 @@ a[target="_blank"] img {
   cursor: zoom-in;
 }
 
+.reference:target {
+  background-color: #ffff00;
+}
+
 @media screen and (max-width: 375px) {
   .grid {
     grid-template-columns: repeat(auto-fill, 100%);
