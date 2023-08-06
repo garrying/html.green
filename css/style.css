@@ -10,6 +10,12 @@ html {
   align-items: center;
 }
 
+@media screen and (max-width: 375px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
