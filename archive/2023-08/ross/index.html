@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- for lompo -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Rainy Day Inside</title>
+    <style>
+      html {
+        font-family: "Menlo", monospace;
+        font-size: 13px;
+      }
+
+      @keyframes rainy {
+        0% {
+          opacity: 0;
+          transform: translateX(-15%) translateY(-5%);
+        }
+        50% {
+          opacity: 1;
+          transform: translateX(0%) translateY(0%);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(10%) translateY(5%);
+        }
+      }
+      @keyframes raining {
+        0% {
+          transform: translateX(-30rem);
+        }
+        70% {
+          transform: translateX(40rem);
+        }
+        100% {
+          transform: translateX(30rem);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: relative; padding: 8rem 8rem; max-width: 40rem">
+      <p style="margin-bottom: 6rem">A rainy day indoors…</p>
+      <div style="position: relative">
+        <pre>
+┌─────────────────────────┐
+│            │            │
+│            │            │
+│            │            │
+│            │            │
+│            │            │
+│────────────│────────────│
+│            │            │
+│            │            │
+│            │            │
+│            │            │
+│            │            │
+└─────────────────────────┘
+      </pre
+        >
+
+        <div
+          style="
+            user-select: none;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.4rem;
+            width: 15.5rem;
+            height: 15rem;
+            overflow: hidden;
+          "
+        >
+          <div style="transform: rotate(72deg)">
+            <div
+              style="
+                animation: raining 1500ms linear infinite both;
+                position: absolute;
+                top: 0rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1500ms linear 200ms infinite both;
+                position: absolute;
+                top: 4rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1200ms linear 800ms infinite both;
+                position: absolute;
+                top: -2rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1500ms linear 1000ms infinite both;
+                position: absolute;
+                top: -1rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1300ms linear 1400ms infinite both;
+                position: absolute;
+                top: 1rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1800ms linear 900ms infinite both;
+                position: absolute;
+                top: 3rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1300ms linear 600ms infinite both;
+                position: absolute;
+                top: 8rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1400ms linear 600ms infinite both;
+                position: absolute;
+                top: 8rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1500ms linear 300ms infinite both;
+                position: absolute;
+                top: 4rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1500ms linear 500ms infinite both;
+                position: absolute;
+                top: 5rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1500ms linear 200ms infinite both;
+                position: absolute;
+                top: -4rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+            <div
+              style="
+                animation: raining 1500ms linear 1000ms infinite both;
+                position: absolute;
+                top: 12rem;
+                color: blue;
+                display: inline-block;
+              "
+            >
+              —————
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            position: absolute;
+            top: 2rem;
+            left: 24rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+          "
+        >
+          <div
+            style="
+              animation: rainy 2400ms linear 0ms infinite both;
+              margin-left: 0.25rem;
+            "
+          >
+            pitter
+          </div>
+          <div
+            style="
+              animation: rainy 1900ms linear 1200ms infinite both;
+              margin-left: 6rem;
+            "
+          >
+            patter
+          </div>
+          <div
+            style="
+              animation: rainy 2000ms linear 2400ms infinite both;
+              margin-left: 2rem;
+            "
+          >
+            pitter
+          </div>
+          <div
+            style="
+              animation: rainy 1600ms linear 3200ms infinite both;
+              margin-left: 8rem;
+            "
+          >
+            patter
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

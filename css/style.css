@@ -2,12 +2,45 @@ html {
   color: #006700;
 }
 
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1600px;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .grid {
   display: grid;
-  max-width: 1185px;
-  grid-template-columns: repeat(auto-fill, 374px);
+  grid-template-columns: repeat(auto-fill, 315px);
   justify-items: center;
   align-items: center;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+h4 {
+  margin-bottom: 0.25rem;
+}
+
+ul {
+  margin-top: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid lightgray;
 }
 
 img {
@@ -27,7 +60,7 @@ a[target="_blank"] img {
   background-color: #ffff00;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 550px) {
   .grid {
     grid-template-columns: repeat(auto-fill, 100%);
   }

@@ -1,0 +1,97 @@
+@font-face {
+  font-family: monothing;
+  src: url(TokyoPalaceInMemoriam.ttf);
+}
+* {
+  margin: 0;
+}
+body {
+  font-family: monothing;
+  background-color: rgb(244, 244, 244);
+}
+.card {
+  position: absolute;
+  background-color: rgb(255 249 238);
+  width: 80vw;
+  height: 80vh;
+  left: 10vw;
+  top: 10vh;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 100px 1px;
+  border: 1px black inset;
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: hidden;
+}
+#square {
+  position: absolute;
+  border: 0.5px solid black;
+  width: 20vw;
+  height: 20vw;
+  right: 1rem;
+  top: 1rem;
+}
+#imgto {
+  filter: grayscale(1) opacity(0.8);
+  position: absolute;
+  /* object-fit: cover; */
+  opacity: 0;
+  width: 50vw;
+  height: 40vw;
+  transform: rotateY(180deg);
+}
+#imgto:hover {
+  animation: postal2 1s both;
+}
+.lines {
+  display: flex;
+  position: absolute;
+  bottom: 10rem;
+  width: 30vw;
+  gap: 1.5rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  left: 1rem;
+}
+#line {
+  height: 2px;
+  width: 40vw;
+  margin: 2rem;
+  /* position: absolute; */
+  transform: rotate(45deg) translate(50%, 50%);
+  /* transform-origin: center; */
+  /* border: 5px dotted black; */
+  background-color: black;
+}
+.card:hover {
+  animation: postal 1s both ease-in-out;
+}
+.card:nth-child(4n):hover {
+  animation: postal3 1s both ease-in-out;
+}
+@keyframes postal {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes postal2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes postal3 {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 70vw;
+  }
+}
+/* #hide:hover {
+  display: none;
+} */
