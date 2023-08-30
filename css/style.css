@@ -48,10 +48,6 @@ img {
   height: auto;
 }
 
-.portrait {
-  height: 340px;
-}
-
 a[target="_blank"] img {
   cursor: zoom-in;
 }
@@ -63,9 +59,5 @@ a[target="_blank"] img {
 @media screen and (max-width: 550px) {
   .grid {
     grid-template-columns: repeat(auto-fill, 100%);
-  }
-
-  .portrait {
-    height: auto;
   }
 }
