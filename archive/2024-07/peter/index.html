@@ -1,0 +1,268 @@
+<!-- Make a site like a slinky -->
+<!-- As you make the page longer through the browser,
+     the "slinky" pulls apart.
+     When the page gets condensed, then the slinky goes back to it's original form.
+     -->
+     <!DOCTYPE html>
+     <html lang="en">
+
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="icon" type="image/x-icon" href="favicon.png">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link
+             href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Oswald:wght@200..700&family=Spicy+Rice&display=swap"
+             rel="stylesheet">
+
+
+         <style>
+          * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #2195cb;
+            background-image: url(data:image/png;base64,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);
+            font-family: sans-serif;
+            font-size: 24px;
+            color: black;
+            text-align: center;
+            font-family: "Spicy Rice", serif;
+            font-weight: 400;
+            font-style: normal;
+            padding-top: 28px;
+        }
+
+        a {
+            color: black;
+
+        }
+
+        h1 {
+            font-family: "Ms Madi", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 90px;
+            line-height: 85%;
+            margin: 42px;
+
+            @media (max-width: 480px) {
+                font-size: 60px;
+            }
+        }
+
+        h3 {
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            margin: 24px;
+
+            @media(max-width: 480px) {
+                font-size: 12px;
+            }
+        }
+
+
+        #slinky {
+            width: 470px;
+
+            @media (max-width:480px) {
+                width: 90%;
+            }
+
+            margin: auto;
+
+            div {
+                width: 100%;
+                height: 1px;
+                background: transparent;
+                border-radius: 50%;
+                border: 2px solid black;
+                /* border-image: linear-gradient(to right, #000000 0%, #ffffff 50%, #000000 100%) 1; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.25s;
+                padding: 0.2vh;
+
+                &:hover {
+                    height: inherit;
+                    padding: 10px 0;
+
+                    span {
+                        display: block;
+                    }
+
+                    iframe {
+                        display: block;
+                    }
+                }
+
+                span {
+                    display: none;
+                    text-align: center;
+                }
+
+                iframe {
+                    display: none;
+                }
+            }
+
+            #slinky-ad-1 {
+
+                &:hover {
+                    background-image: url("https://i.pinimg.com/originals/56/80/0b/56800b6b2ba90500b9d4e62d91d2893f.jpg");
+
+                    height: 450px;
+                }
+            }
+
+            #slinky-ad-2 {
+
+                &:hover {
+                    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/5908d723409279.56322fdeb7ed2.jpg");
+                    background-repeat: no-reapt;
+                    background-size: cover;
+                    background-position: center center;
+                    height: 450px;
+                }
+            }
+
+            #slinky-ad-3 {
+
+                &:hover {
+                    background-image: url("https://i.pinimg.com/originals/cf/dd/aa/cfddaaf9aacd33afc2e017bff89b4e8c.jpg");
+                    background-repeat: no-reapt;
+                    background-size: cover;
+                    background-position: center center;
+                    height: 450px;
+                }
+            }
+
+            #slinky-ad-4 {
+
+                &:hover {
+                    background-image: url("https://i.ebayimg.com/images/g/MIIAAOSwmSZbRfor/s-l1600.jpg");
+                    background-repeat: no-reapt;
+                    background-size: cover;
+                    background-position: center center;
+                    height: 450px;
+                }
+            }
+        }
+
+
+        .mobile {
+            display: none;
+
+            @media(max-width: 480px) {
+                display: block
+            }
+        }
+
+        .desktop {
+            display: block;
+
+            @media(max-width: 700px) {
+                display: none;
+            }
+        }
+         </style>
+         <title>A Silly Slinky Story</title>
+
+     </head>
+
+     <body id="body">
+         <h1>A Silly <br class="mobile">Slinky Story</h1>
+         <!-- <h3>by Peter Ha</h3> -->
+         <main id="slinky">
+             <div id="t"><span>When I was a kid</span></div>
+             <div class="t"><span>I had a neighbour named Mark</span></div>
+             <div class="t"><span>We were the same age</span></div>
+             <div><span>And we would play together</span></div>
+             <div><span>One Christmas</span></div>
+             <div><span>We exchanged gifts</span></div>
+             <div><span>Except I didn't have a gift to give</span></div>
+             <div><span>How rude of me!</span></div>
+             <div><span>Mark hands me a wrapped box</span></div>
+             <div><span>I start to open it</span></div>
+             <div><span>And it's a slinky!</span></div>
+             <div id="slinky-ad-1"></div>
+             <div><span>One of the coolest toys ever</span></div>
+             <div><span>Ever to be made</span></div>
+             <div><span>Mark awaits to see what I say</span></div>
+             <div><span>Being the little b**** I was</span></div>
+             <div><span>I showed absolutely zero interest</span></div>
+             <div><span>I did say thanks</span></div>
+             <div><span>And then bounced</span></div>
+             <div><span>We lived next to one another</span></div>
+             <div><span>So it wasn't a far trek</span></div>
+             <div id="slinky-ad-2"></div>
+             <div><span>When I got home</span></div>
+             <div><span>I put away the slinky</span></div>
+             <div><span>I kind of forgot about it</span></div>
+             <div><span>But every now and then</span></div>
+             <div><span>I would hear kids talk about</span></div>
+             <div><span>Slinky this, slinky that</span></div>
+             <div><span>It was a hot toy in the 90s</span></div>
+             <div><span>One day I decided</span></div>
+             <div><span>To see what a slinky can do</span></div>
+             <div><span>To my amazement</span></div>
+             <div><span>Quite a bit!</span></div>
+             <div><span>You can watch</span></div>
+             <div id="slinky-ad-3"></div>
+             <div><span>It go down a flight of stairs</span></div>
+             <div><span>Make it go back and forth</span></div>
+             <div><span>In your hands</span></div>
+             <div><span>The one that I was gifted</span></div>
+             <div><span>Was a metal one</span></div>
+             <div><span>So everytime it moved</span></div>
+             <div><span>It would also make</span></div>
+             <div><span>A satisfying sound</span></div>
+             <div><span>After spending hours</span></div>
+             <div><span>Day in</span></div>
+             <div><span>And day out</span></div>
+             <div id="slinky-ad-4"></div>
+             <div><span>I started to see the appeal</span></div>
+             <div><span>I started to appreciate</span></div>
+             <div><span>I was thankful</span></div>
+             <div><span>To have this simple</span></div>
+             <div><span>Toy that brought me joy</span></div>
+             <div><span>In the simplest ways</span></div>
+             <div><span>I don't keep in touch</span></div>
+             <div><span>With Mark</span></div>
+             <div><span>And he probably doesn't even know</span></div>
+             <div><span>I think about his gift</span></div>
+             <div><span>To this day</span></div>
+             <div><span>Thank you Mark!</span></div>
+             <div><span>For the gift!</span></div>
+
+         </main>
+         <h3>A quick and short story written by Peter Ha. Based on true events of a brat child.<br class="desktop">Made in
+             part at
+             <a href="https://html.green/" target="_blank">HTML (Day) in the Park</a> in Toronto, July 13 2024.
+         </h3>
+         <script>
+             // Get all spans that contain text
+             let text = document.getElementsByTagName("span");
+             let divs = document.getElementsByTagName("div");
+             // color palette
+             let colors = ["#FFFEED", "#901A1A", "#CDD873", "#114A00", "#493162"];
+
+             for (let i = 0; i < text.length; i++) {
+                 text[i].style.color = colors[i % colors.length];
+             }
+
+             function getRandomInt(max) {
+                 return Math.floor(Math.random() * max);
+             }
+         </script>
+     </body>
+
+     </html>
