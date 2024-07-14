@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML in the Park</title>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        --green: #65B468;
+        --yellow: #A6774B;
+      }
+
+      body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;}
+
+      .mono {
+        font-family: monospace;
+      }
+
+      .green { color: var(--green); }
+      .yellow { color: var(--yellow); }
+      .blue { color: skyblue; }
+
+      .p-4 {
+        padding: 1rem;
+      }
+
+      .px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 1.0;
+        }
+        60% {
+          opacity: 1.0;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .animate-fade {
+        animation-name: fade;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+    </style>
+  </head>
+  <body class="p-4 px-8">
+    <div style="max-width: 800px; margin-left: auto; margin-right: auto;">
+    <div class="mono">
+      <div class="yellow" style="margin-left: 20rem">
+        <p class="animate-fade" style="margin-left: 12rem; animation-delay: 0s;">chirp</p>
+        <p class="animate-fade" style="margin-left: -8rem; animation-delay: 1s;">chirp</p>
+        <p class="animate-fade" style="margin-left: 4rem; animation-delay: 3s;">chirp</p>
+        <p class="animate-fade" style="margin-left: -2rem; animation-delay: 4s;">chirp</p>
+      </div>
+      <pre style="margin-left: 5rem; position: relative; left: 4rem">
+    ^
+   (  \
+____(  \( .)>
+\________/
+    |   |
+     <   <
+     <span style="font-size: 2rem; position: relative; top: -1rem;">𓆑</pre>
+      </pre>
+    </div>
+    <div style="position: relative">
+      <marquee style="position: absolute; top: -12rem" scrollamount="1" scrolldelay="-100" truespeed direction="left">
+        <span class="blue" style="opacity: 0.50;">〰️</span>
+      </marquee>
+      <marquee style="position: absolute; top: -6rem" scrollamount="4" scrolldelay="200" truespeed direction="left">
+        <span class="blue" style="opacity: 0.75;">☁️</span>
+      </marquee>
+      <marquee style="position: absolute; top: -11rem" scrollamount="2" scrolldelay="50" truespeed direction="left">
+        <span class="blue" style="opacity: 0.75;">☁️</span>
+      </marquee>
+      <marquee
+        class="green"
+        style="position: absolute; left: 0"
+        scrollamount="10"
+        scrolldelay="-100"
+        truespeed
+        direction="left"
+      >
+        |<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||<small>|</small>|<small>|</small>|||<small>|</small>|||<small>|</small>|||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>||||||||<small>||</small>|||<small>|||</small>||||||<small>||</small>|||
+      </marquee>
+      <div style="height: 2px; position: relative; top: 18px; background-color: var(--green);"></div>
+    </div>
+    </div>
+  </body>
+</html>

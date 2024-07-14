@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>emoticon innovations 2024</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --text-color-light: 49, 129, 56;
+        --bg-color-light: 246, 255, 235;
+
+        --text-color-dark: 246, 255, 235;
+        --bg-color-dark: 49, 129, 56;
+
+        --font-mono: "DejaVu Sans Mono", "Menlo", monospace;
+      }
+      body {
+        --text-color: var(--text-color-light);
+        --bg-color: var(--bg-color-light);
+
+        padding: 1ex;
+        font-size: 16px;
+        line-height: 2ex;
+        color: rgb(var(--text-color));
+        background-color: rgb(var(--bg-color));
+        font-family: var(--font-mono);
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          --text-color: var(--text-color-dark);
+          --bg-color: var(--bg-color-dark);
+        }
+      }
+
+      /* :::::::::::::::::::::::::::::::::: */
+      /*               LAYOUT               */
+      /* :::::::::::::::::::::::::::::::::: */
+      .grid {
+        display: grid;
+        grid-template-columns: 10ch 1fr;
+        gap: 1ex 2ch;
+      }
+      .right {
+        text-align: right;
+      }
+
+      /* :::::::::::::::::::::::::::::::::: */
+      /*             TYPOGRAPHY             */
+      /* :::::::::::::::::::::::::::::::::: */
+
+      /* ············· utility ············ */
+      .nomargin {
+        margin: 0;
+      }
+      section + section {
+        margin-top: 2ex;
+      }
+      code {
+        margin: 0;
+        padding: 0;
+        background: rgba(var(--text-color), 0.1);
+      }
+
+      /* ············ headings ············ */
+      h1,
+      h2,
+      h3 {
+        line-height: 1.75ex;
+        margin-bottom: 1ex;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      /* ············ body copy ··········· */
+      p,
+      span {
+        font-size: 1rem;
+      }
+
+      /* ·············· links ············· */
+      a {
+        color: rgb(var(--text-color));
+        background: none;
+      }
+      a:hover {
+        color: rgb(var(--bg-color));
+        background: rgb(var(--text-color));
+      }
+    </style>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <section>
+      <h1 class="nomargin">emoticon innovations 2024</h1>
+      <h2>(for <a href="https://html.green" target="_blank">html day 2024</a>)</h2>
+    </section>
+    <section>
+      you've all seen <code>:)</code>... and perhaps even <code>:3</code>... But so much more is possible...
+    </section>
+    <section>
+      <h3>faces</h3>
+      <div class="grid">
+        <span><code>^ w,^</code></span>
+        <span>drooling kitty face</span>
+
+        <span><code>^,,^</code></span>
+        <span>vampire fangs</span>
+
+        <span><code>^//_//^</code></span>
+        <span>C-style blushing face</span>
+
+        <span><code>^##_##^</code></span>
+        <span>pythonic blushing face</span>
+
+        <span><code>^--_--^</code></span>
+        <span>lua-style blushing face</span>
+
+        <span><code>^%%_%%^</code></span>
+        <span>i don't even wanna know...</span>
+      </div>
+    </section>
+    <section>
+      <h3>objects</h3>
+      <div class="grid">
+        <span><code>(:|{[]|)</code></span>
+        <span>burger (it's not very good... sorry)</span>
+
+        <span><code>&gt;( &lt; ^) .°</code></span>
+        <span>fish (with bubble)</span>
+
+
+      </div>
+    </section>
+  </body>
+</html>
