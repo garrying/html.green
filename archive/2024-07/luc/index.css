@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+}
+
+body {
+    padding: 0 10px;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    color: purple;
+    background:  url('/archive/2024-07/luc/images/fallingleaves.gif'), linear-gradient(#e6cec5, #edc4b4);
+}
+
+.cat-rule {
+    padding: 1rem 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    padding: 2rem 0;
+}
+
+.brio-shape {
+    float: left;
+    shape-outside: url('/archive/2024-07/luc/images/brio_hat_nobg.png');
+    width: 200px;
+}
+
+.info-container {
+    overflow: auto;
+    background-color: #c49a89;
+    color: white;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.info-container ul {
+    list-style: none;
+    padding-top: 1rem;
+}
+.info-container ul li b {
+    padding-left: 1rem;
+}
+
+figure {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    margin-bottom: .75rem;
+}
+
+figure figcaption {
+    white-space: pre-wrap;
+    text-wrap: balance;
+}
+
+.copyright {
+    text-align: center;
+    font-size: .5rem;
+}
+
+h1 {
+    text-align: center;
+}
