@@ -1,0 +1,98 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden; /* Prevent scrollbars due to random positioning */
+  background-color: #CCEBD0;
+}
+
+@keyframes sway {
+  0% {
+      transform: translateX(-10px) rotate(-5deg);
+  }
+  50% {
+      transform: translateX(10px) rotate(5deg);
+  }
+  100% {
+      transform: translateX(-10px) rotate(-5deg);
+  }
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.head-text {
+  align-items: center;
+  text-align: center;
+  margin-top: 3%;
+  z-index: 3;
+}
+
+.blanket {
+  margin: 0;
+  position: absolute; /* Ensure the blanket is in a relative context */
+  z-index: 1; /* Ensure the blanket is above other elements */
+  top: 50%;
+  left: 50%;
+  transform: translateX(-130%) translateY(-40%);
+  align-items: center;
+  text-align: center;
+}
+
+.dandelion {
+  text-align: left; /* Align text to the left */
+  font-family: monospace;
+  position: absolute;
+  bottom: 10%; /* Adjust as needed */
+  right: 10%; /* Adjust as needed */
+  white-space: pre; /* Preserve formatting */
+  z-index: 1; /* Ensure dandelion is below emojis */
+}
+
+pre {
+  margin: 0; /* Remove default margin */
+  font-family: monospace;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 2rem; /* Adjust as needed */
+  white-space: pre; /* Preserve formatting for ASCII art */
+  z-index: 2;
+}
+
+.blanket-emojis {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure it doesn't block interaction with other elements */
+}
+
+.sway {
+  animation: sway 3s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.blanket .emoji {
+  font-size: 3rem; /* Increase font size for blanket emojis */
+}
+
+.footer {
+  position: absolute;
+  font-size: 1rem;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center; /* Centers text horizontally */
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally within flex container */
+  align-items: center; /* Centers content vertically within flex container */
+}
+
+
