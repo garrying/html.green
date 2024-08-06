@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" initial-scale="1" />
+
+    <style>
+      body {
+        margin: 0px;
+        background-color: skyblue;
+        color: white;
+        line-height: 2;
+        animation-name: sky;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+        overflow: hidden;
+      }
+
+      @keyframes sky {
+        0% {
+          background-color: rgba(135, 206, 235, 1);
+        }
+        50% {
+          background-color: rgba(135, 206, 235, 0.6);
+        }
+        100% {
+          background-color: rgba(135, 206, 235, 1);
+        }
+      }
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      details,
+      summary {
+        margin: 0px;
+        padding: 0px;
+        font-weight: normal;
+      }
+
+      main {
+        margin: 20px;
+        overflow: auto;
+        max-height: 100vh;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .bg {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        opacity: 20%;
+        width: 100vw;
+        height: 100vh;
+        margin-bottom: 10px;
+      }
+
+      details {
+        max-width: 700px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>The Sky on HTML Day in Toronto</h1>
+
+      <details>
+        <summary>observation #1</summary>
+        <figure>
+          <img src="./images/sky-1.jpg?v=1722898076884" />
+          <figcaption>
+            this cloud looks a bit like a dog walker playing with a group of
+            dogs.
+          </figcaption>
+        </figure>
+      </details>
+
+      <details>
+        <summary>observation #2</summary>
+        <figure>
+          <img src="./images/sky-2.jpg?v=1722898078521" />
+          <figcaption>
+            we hid under the shade of a tree, but it left the sun feeling a
+            little left out. sol still joined us in moderation, though.
+          </figcaption>
+        </figure>
+      </details>
+
+      <details>
+        <summary>observation #3</summary>
+        <figure>
+          <img src="./images/sky-3.jpg?v=1722898078114" />
+          <figcaption>
+            after a long week of rain, HTML day was extremely clear.
+          </figcaption>
+        </figure>
+      </details>
+
+      <details>
+        <summary>observation #4</summary>
+        <figure>
+          <img src="./images/sky-4.jpg?v=1722898079060" />
+          <figcaption>a beluga whale portrait.</figcaption>
+        </figure>
+      </details>
+
+      <details>
+        <summary>observation #5</summary>
+        <figure>
+          <img src="./images/sky-5.jpg?v=1722898075975" />
+          <figcaption>
+            a spotted dog sitting, facing our left. I am thinking about dogs
+            today!
+          </figcaption>
+        </figure>
+      </details>
+
+      <details>
+        <summary>observation #6</summary>
+        <figure>
+          <img src="./images/sky-6.jpg?v=1722898074951" />
+          <figcaption>
+            ross says this one looks like a running dashhound. (my phone died so
+            I switched to taking photos with my macbook.)
+          </figcaption>
+        </figure>
+      </details>
+
+      <details>
+        <summary>observation #7</summary>
+        <figure>
+          <img src="./images/sky-7.JPG?v=1722898074654" />
+          <figcaption>
+            lisa says these clouds look like a bird (left) and a cat laying on
+            its side (right). (the macbook images r so low quality, shifted to
+            my ays iii!)
+          </figcaption>
+        </figure>
+      </details>
+
+      <br />
+
+      <img class="bg" src="./images/htmlday.JPG?v=1722898072725" />
+    </main>
+  </body>
+</html>
