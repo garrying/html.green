@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .smoothHovering {
+      background-color: darkgreen;
+      color: whitesmoke;
+      border-radius: 4px;
+      border: none;
+      padding: 8px 10px;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transform-origin: center center;
+      transition: 2s ease-in-out;
+    }
+
+    .smoothHovering:hover {
+      transform: translate(-50%, -50%) scale(1.5) rotateZ(2deg);
+      padding: 12px 14px;
+    }
+
+    body {
+      transition: 2s ease-in-out;
+    }
+
+    body:has(.smoothHovering:hover) {
+      background: #004b23;
+    }
+
+    .circle {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 0%;
+      
+      width: 400px;
+      height: 400px;
+      background-color: yellow;
+      filter: blur(200px);
+      opacity: 0;
+      transition: 2s ease-in-out;
+      animation-name: subtleMovement;
+      animation-duration: 7000ms;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+
+    .circle-bottom {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 100%;
+      left: 100%;
+      width: 400px;
+      height: 400px;
+      background-color: yellow;
+      filter: blur(200px);
+      opacity: 0;
+      transition: 2s ease-in-out;
+    }
+
+    body:has(.smoothHovering:hover) .circle,
+    body:has(.smoothHovering:hover) .circle-bottom {
+      opacity: 1;
+    }
+
+    @keyframes subtleMovement {
+      from {
+        translate: 0% 0;
+      }
+
+      to {
+        translate: 100% 0;
+      }
+    }
+  </style>
+  <body>
+    <button class="smoothHovering">Chill out big dog</button>
+    <div class="circle"></div>
+    <div class="circle-bottom"></div>
+  </body>
+</html>

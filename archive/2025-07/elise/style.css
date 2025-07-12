@@ -1,0 +1,50 @@
+html {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  background-color: greenyellow;
+  cursor: url("images/cursor.png"), auto;
+}
+
+.aboveground {
+  height: 100%;
+  overflow: auto;
+  margin-top: 20%;
+  margin-left: 20%;
+  padding: 0;
+  cursor: url("./cursor.png"), auto;
+}
+
+.underground {
+  height: 100%;
+  background-color: rgb(56, 42, 34);
+  overflow: auto;
+  margin-top: 0%;
+  margin-left: 0%;
+  padding: 0;
+  cursor: url("./cursor.png"), auto;
+}
+
+button {
+  background-color: rgb(56, 42, 34);
+  border: none;
+  border-radius: 60%;
+  padding: 2%;
+  cursor: url("./cursor.png"), auto;
+}
+
+.underground-button {
+  background-color: skyblue;
+  border: none;
+  border-radius: 60%;
+  padding: 2%;
+  cursor: url("./cursor.png"), auto;
+}
