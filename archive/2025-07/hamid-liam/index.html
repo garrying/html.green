@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orchives</title>
+    <meta name="description" content="description"/>
+    <meta name="author" content="author" />
+    <meta name="keywords" content="keywords" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <style>
+        body {
+            font-family: 'Roboto-mono', monospace;
+            background-color: beige;
+            margin: 0;
+            padding: 20px;
+        }
+
+        figure {
+            width: 100px;
+            height: 100px;
+            transition: all 1s;
+        }
+
+        figure:hover {
+            width: 500px;
+            height: 500px;
+            transition: all 1s;
+            color: green;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        figure:hover figcaption {
+            background-color: beige;
+            border: 1px solid green;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        figcaption {
+            background-color: transparent;
+            font-size: 10px;
+            pointer-events: none;
+            word-break: break-all;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        img:active {
+            animation-name: saturate;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        h1 {
+            font-weight: 100;
+            text-align: center;
+            margin: 100px;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            font-style: italic;
+            color: green;
+            font-size: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        p {
+            color: green;
+        }
+
+        footer {
+            border: 1px solid green;
+            padding: 5px;
+            width: 650px;
+            margin: auto;
+        }
+
+        footer p {
+            font-size: 12px;
+        }
+
+        a {
+            color: green;
+        }
+
+        a:hover {
+            text-decoration: overline;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        .spinner {
+            animation-name: spin;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            font-size: 50px;
+        }
+
+        .flowers {
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes spin {
+            from {
+                transform:rotate(0deg);
+            }
+            to {
+                transform:rotate(360deg);
+            }
+        }
+
+        @keyframes saturate {
+            0% {
+                filter: saturate(1);
+            }
+            50% {
+                filter: saturate(2);
+            }
+            100% {
+                filter: saturate(1);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div
+        style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        "
+    >
+        <p class="spinner">✼</p>
+        <h1>Orchives</h1>
+        <p class="spinner">✼</p>
+    </div>
+    <h3
+        style="
+            text-align: center;
+            margin-top: -75px;
+            margin-bottom: 100px;
+            font-size: 0.75rem;
+            font-weight: normal;
+            color: #333;
+        "
+    >
+        some orchidaceae and their thoughts
+    </h3>
+    <div
+        class="flowers"
+    >
+        <figure>
+            <img id="flower-1" src="images/1.png"/>
+            <figcaption>
+                "Come on. It's just a naming convention like any other. Don't you think he looks like a little Sitri?"
+                <br/><br/>
+                "It. Looks like a flower. Not really even a very healthy one, judging by those stems."
+                <br/><br/>
+                "Hey! You'll hurt his feelings."
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-2" src="images/2.png"/>
+            <figcaption>
+                "I could supply a list of cherubim."
+                <br/><br/>
+                "When did you start getting a sense of humor?"
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-3" src="images/3.png"/>
+            <figcaption>
+                "You're naming them after demons? Don't you think that could be somewhat..."
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-4" src="images/4.png"/>
+            <figcaption>
+                "Edgy?"
+                <br/><br/>
+                "Reckless."
+            </figcaption>
+        </figure>
+    </div>
+    <div
+        class="flowers"
+    >
+        <figure>
+            <img id="flower-5" src="images/5.png"/>
+            <figcaption>
+                "A placeholder name?"
+                <br/><br/>
+                "Mmm?"
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-6" src="images/6.png"/>
+            <figcaption>
+                "Amy. Or perhaps you've simply tired of invoking such blasphemous concepts."
+                <br/><br/>
+                "Did I find a hole in your historical databases?President Amy, fifty eighth spirit of the Lesser Key of Solomon! Isn't she cute?"
+                <br/><br/>
+                "My databases are exhaustive to the point of infinity, as far as you are concerned. Thankfully, the partition that this construct is allowed to access does not contain mentions of such..."
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-7" src="images/7.png"/>
+            <figcaption>
+                "The laboratory is outfitted with state of the art security and monitoring systems to ensure the safety of all-"
+                <br/><br/>
+                "Alright alright, shut the fuck up. Stop response. I mean, were you recording me?"
+                <br/><br/>
+                "The laboratory is outfitted with state of the art security and monitoring sys-"
+                <br/><br/>
+                "Stop response!"
+                <br/><br/>
+                "..."
+                <br/><br/>
+                "Stop recording."
+                <br/><br/>
+                "..."
+                <br/><br/>
+                "...fucking thing..."
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-8" src="images/8.png"/>
+            <figcaption>
+                "Hey? I didn't say stop response, what's up?"
+                <br/><br/>
+                "sssssssssssssssssssuuuuuuuuuuuuuuuuuucccccccccccchhhhhhhhhhhhhhhhhhh"
+                <br/><br/>
+                "What the fuck? Stop response. Stop response. Stop response!"
+                <br/><br/>
+                "sssssssssssssssssssssss̵̲̍ŝ̴͂s̶͐̅s̷̛͒s̸̅̈"
+                <br/><br/>
+                "Fuck, volume down! Enter debug mode!"
+                <br/><br/>
+                "s̶̓̇s̸͋̒s̴͑̋s̶̄̕s̴̜̾s̸̾̇s̵̉sss̈s̶̛̈s̵͐̇s̶̃͑s̷̃̈́s̸ssssss̴̀ssssŝ̶swateran̽ds̴u͋̕n̸̑lightsssŝ̃ŝ̴̺s̷̈sssssssss̿".  "
+                <br/><br/>
+                "Volume down![indecipherable] my ears!"
+            </figcaption>
+        </figure>
+    </div>
+    <div
+        class="flowers"
+    >
+        <figure>
+            <img id="flower-9" src="images/9.png"/>
+            <figcaption>
+                "...fucking god-damned fucking thing, doing this shit just to spite me, get dirt in my fucking nails [indecipherable] hours to get out-"
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-10" src="images/10.png"/>
+            <figcaption>
+                "It's unlikely that the orchid is acting with any malice or inten-"
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-11" src="images/11.png"/>
+            <figcaption>
+                "Jesus fuck! I didn't say the prompt, why are... When did you start listening?"
+            </figcaption>
+        </figure>
+        <figure>
+            <img id="flower-12" src="images/12.png"/>
+            <figcaption>
+                "..."
+                <br/><br/>
+                "...hello?"
+                <br/><br/>
+                "A placeholder name?"
+                <br/><br/>
+                "Man, what was in that update?" 
+            </figcaption>
+        </figure>
+    </div>
+    <div
+        style="
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 800px;
+            margin-bottom: 200px;
+        "
+    >
+        <span
+            style="
+                width: 650px;
+                border: 1px solid green;
+                padding: 12px;
+            "
+        >
+            Hey. 
+            <br/>
+            <br/>
+            Wow you scrolled all the way down here? It's not that interesting down here, but I guess you want to learn more.
+            <br/>
+            <br/>
+            Hamid found Liam one day sitting at a cafe and then they became friends to this day.
+            <br/>
+            <br/>
+            Years later, they've made this site together while attending <a style="font-size: 12px" href="https://html.green/">HTML in the park</a> on Saturday/July 5th/2025 @Dovercourt Park in Toronto.
+            <br/>
+            <br/>
+            Photos from the <a href="https://en.wikipedia.org/wiki/Rio_de_Janeiro_Botanical_Garden">Rio de Janeiro Botanical Garden, Brazil.</a>
+            <br/>
+            <br/>
+            Thank you for taking a look!
+        </span>
+    </div>
+    <footer>
+        <span>Writings by <a href="https://andruse.github.io/">Liam</a></span>
+        <br/>
+        <span>Site and photos by <a href="https://yooksel.com/">Hamid</a></span>
+    </footer>
+  </body>
+</html>
