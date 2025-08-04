@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>recent toronto animals</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 1rem
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1rem;
+        }
+
+        .images img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+
+            &:hover {
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>recent toronto animals</h1>
+    <div class="images">
+        <img src="images/IMG_1228.webp">
+        <img src="images/IMG_1230.webp">
+        <img src="images/IMG_1414.webp">
+        <img src="images/IMG_1580.webp">
+        <img src="images/IMG_1677.webp">
+        <img src="images/IMG_1698.webp">
+        <img src="images/IMG_1773.webp">
+        <img src="images/IMG_1982.webp">
+        <img src="images/IMG_2013.webp">
+        <img src="images/IMG_2046.webp">
+        <img src="images/IMG_2109.webp">
+        <img src="images/IMG_2112.webp">
+        <img src="images/IMG_2196.webp">
+        <img src="images/IMG_2328.webp">
+        <img src="images/IMG_2409.webp">
+        <img src="images/IMG_2426.webp">
+        <img src="images/IMG_2432.webp">
+        <img src="images/IMG_5749.webp">
+        <img src="images/IMG_5945.webp">
+        <img src="images/IMG_6083.webp">
+    </div>
+
+    <p><em>by <a href="https://samdalmonte.com/">sam</a> (<a href="https://are.na/sam-dal-monte">are.na</a>)</em></p>
+
+    <script>
+        let images = document.querySelector('.images');
+        for (let i = images.children.length; i >= 0; i--) {
+            images.appendChild(images.children[Math.random() * i | 0]);
+        }
+    </script>
+</body>
+
+</html>

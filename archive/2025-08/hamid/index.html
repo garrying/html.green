@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lost Lost Pet Posters</title>
+    <meta name="description" content="Website for HTML Day (in the park)"/>
+    <meta name="author" content="Hamid Yuksel" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 20px;
+            color: orangered;
+            background-color: beige;
+        }
+
+
+        h1 {
+            font-size: 200%;
+            font-weight: 100;
+            letter-spacing: 10px;
+            word-break: break-all;
+            text-align: center;
+        }
+
+        p {
+            padding: 10px;
+            font-size: 200%;
+        }
+
+        .posters-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .poster {
+            width: 200px;
+            height: 200px;
+            overflow: scroll;
+            border-radius: 100%;
+            transition: all 1s;
+            border: 1px solid orangered;
+        }
+
+        .poster:hover {
+            cursor: pointer;
+        }
+
+        .poster p {
+            display: none;
+        }
+
+        .poster:hover {
+            width: 500px;
+            height: 500px;
+            border-radius: 0%;
+        }
+
+        .poster:active img, .poster:active h1 {
+            display: none;
+        }
+
+
+        .poster:active p {
+            display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <main 
+        class="posters-container"
+    >
+        <div
+            class="poster"
+            style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+            "
+        >
+            <h1>Lost Lost Pet Posters</h1>
+            <p
+                style="
+                    font-size: 150%;
+                    font-weight: 100;
+                "
+            >
+                Go find them before they're found
+            </p>
+        </div>
+        <div
+            class="poster"
+            style="
+                left: -50px
+            "
+        >
+            <img src="assets/1.png" />
+            <p><br/>Dog from Jameson & Gardiner</p>
+            <p>
+                Big dogBig dogBig dogBig dogBig dogBig dogBig dogBig dogBig dogBig dogBig dogBig dogBig dogBig dogBig dogBig dog
+            </p>
+            <p>
+                Where did you go, big dog?
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/2.png" />
+            <p>Cat named Tuvidet(?)</p>
+            <p>
+                Please look please look please look please look
+            </p>
+            <p>
+                Under trees under cars under sheds under garages
+            </p>
+            <p>
+                Were you ever found?
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/3.png" />
+            <p>Cat named Tiger or Tatu</p>
+            <p>
+                All the things you saidAll the things you saidAll the things you saidAll the things you saidAll the things you said
+            </p>
+            <p>
+                Running through my head Running through my head
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/4.png" />
+            <p>Cat named Panther</p>
+            <p>
+                My baby's got claws and teeth and fangs and claws and rough taste and a sweet disposition like that of pillow with thorns or something.
+            </p>
+            <p>
+                Now?
+            </p>
+            <p>
+                My baby's gone missing.
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/5.png" />
+            <p>Dog lost at High Park</p>
+            <p>
+                Iced out cool kat enjoying the sun.
+            </p>
+            <p>
+                Went to the park to have some fun.
+            </p>
+            <p>
+                Now he's gone.
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/6.png" />
+            <p>Chat nommé Noisette</p>
+            <p>
+                Elle est la, dans un place perdue.
+            </p>
+            <p>
+                Et maintenant je n'en sais pas si elle est trouver.
+            </p>
+            <p>
+                C'est triste. Trés triste, je pense.
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/7.png" />
+            <p>Cat named Monty</p>
+            <p>
+                I've heard this joke before.
+            </p>
+            <p>
+                A cat comes into a bar. The FBI is listening in.
+            </p>
+            <p>
+                Watching everything and everyone but not enough to give a call back.
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/8.png" />
+            <p>Cat called Malice</p>
+            <p>
+                Pure helllllllllllll.
+            </p>
+            <p>
+                But the only greater misery has been this one thing:
+            </p>
+            <p>
+                Waiting for you to come back.
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/9.png" />
+            <p>Cat called Yoji</p>
+            <p>
+                Did you ever get back home?
+            </p>
+            <p>
+                Yoji: "Meow. Meow, meow meow. Meow."
+            </p>
+            <p>
+                True words, my little friend.
+            </p>
+        </div>
+        <div
+            class="poster"
+        >
+            <img src="assets/10.png" />
+            <p>Cat called Goose</p>
+            <p>
+                THE GOOSE IS LOOSE
+            </p>
+            <p>
+                Hope you have better days ahead after this is all over because it's been a lot to deal with lately.
+            </p>
+            <p>
+                I bet it's all good now.
+            </p>
+        </div>
+    </main>
+    <section
+        style="
+            margin-top: 200px;
+            width: 500px;
+            font-size: 10px;
+        "
+    >
+        <p>
+            You may never know if any of these little fellas will ever be found. We just continue on and let these posters age and fade. Maybe happy endings exist for some of them, maybe not. Someone is or was out there looking for them, asking us all to do the same if we can. 
+        </p>
+        <p>
+            I have not ever seen any of these pets. I don't know anything about their owners. But their posters intrigued me enough. I took their photos, wanting to keep their memory alive in some way. I hope they all found their peace.
+        </p>
+    </section>
+    <footer
+        style="
+            padding-left: 10px;
+        "
+    >
+        <span>Site and photos by <a href="https://yooksel.com/">Hamid</a></span>
+    </footer>
+  </body>
+</html>

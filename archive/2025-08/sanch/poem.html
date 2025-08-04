@@ -1,0 +1,213 @@
+<!doctype=<html>
+    <head>
+        <title>
+            poem4u
+        </title>
+        <style>
+            body{
+                font-family:monospace;
+                background-color: palegreen;
+            }
+            #poem{
+                font-family: 'Courier New', Courier, monospace;
+                display: inline-block;
+                text-align: center;
+                border-style: dotted;
+                border-radius: 10px;
+                padding: 20px;
+                background-color: rgb(255, 190, 252);
+            }
+
+            .button {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+            .box {
+            display: none;
+            width: 400px;
+            height: auto;
+            border-style:dotted ;
+            background-color: rgb(165, 253, 255);
+        
+           
+        }
+
+        #flower1{
+            font-size: 80px;
+            padding-left: 80px;
+            color: rgb(255, 218, 124);
+        }
+
+        #flower2{
+            font-size: 90px;
+            color: rgb(180, 188, 255);
+        }
+
+        #flower3{
+            font-size: 100px;
+            color: rgb(230, 181, 255);
+        }
+
+        #flower4{
+            font-size: 80px;
+            color: rgb(255, 101, 162);
+        }
+
+        #flower5{
+            font-size:50px;
+            color: rgb(139, 172, 250);
+        }
+
+        #flower6{
+            font-size:90px;
+            padding-left: 200px;
+            color: rgb(255, 155, 237);
+        }
+body
+{
+    display: flex
+;
+    justify-content: center;
+}
+
+            
+        </style>
+
+
+    </head>
+
+    <body>
+        <p> click on the flowers in the garden. <p>
+        <div>
+            <a id="flower6" class="button" onclick="showbox('box6')">･°❀⋆</a>
+            <div id="box6" class="box">
+                here lies the shaping of the mesh, responses and encounters alters the net unpredictably, they are indeterminate in nature, in nature.
+                <a onclick="hidebox('box6')">[❀]</a>
+            </div>
+    
+            <br>
+    
+              <div id="poem"></div> 
+              
+              <br>
+              <a id="flower1" class="button" onclick="showbox('box1')">.ೃ𖤣.</a>
+    
+                <div id="box1" class="box">
+                    indeterminacy is the shape and shaping of energy. 
+                    <a onclick="hidebox('box1')">[❀]</a>
+                </div>
+    
+            
+    
+             <a id="flower2" class="button" onclick="showbox('box2')">𖥧.𖡼</a>   
+               
+             <div id="box2" class="box">
+                while our exterior frame leaves little space for growth or decay without structure, linearity or maps, our internal mesh extends beyond, into a net of energies. these umbilical threads exist to draw us into one another, draw us beyond ourselves. each tug, each pull, each release of tension alters the shape of the fabric, alters the mesh. 
+                <a onclick="hidebox('box2')">[❀]</a>
+             </div>
+    <br> 
+             <a id="flower3" class="button" onclick="showbox('box3')">.⚘°❀</a>
+    
+             <div id="box3" class="box">
+                John Cage writes and composes a polyphony of indeterminant interactions. 
+    he also forages for mushrooms, and develops this understanding of a particular form of attention – to the here and now, to all the "contingencies and surprises."
+             <a onclick="hidebox('box3')">[❀]</a>
+            </div>
+    
+        <br>
+            
+            <a id="flower4" class="button" onclick="showbox('box4')">⋆.ೃ࿔</a>
+            <div id="box4" class="box">
+             <img src="jc_poem.png" style="width:350px;height:400px ;">
+                <a onclick="hidebox('box3')">[❀]</a>
+            </div>
+    
+            <a id="flower5" class="button" onclick="showbox('box5')">:𖡼.⚘</a>
+            <div id="box5" class="box">
+                Anna Lowenhaupt Tsing writes about smell and memory. the body is moved to a response, a memory with no access to distance or time, through a scent familiar. a memory that co-exists with only those that cannot be described, cannot be sketched into graphs.
+                <a onclick="hidebox('box3')">[❀]</a>
+            </div>
+    
+        </div>
+       
+       
+
+
+        <script>
+            
+            const walking = [
+"as i walk through this unkept garden,",
+"as i walk through this abandoned greenhouse,",
+"as i walk through this wasteland forest,",
+"as i walk through this parking lot,"
+            ];
+
+            const friend = [
+                "i come across a fox.",
+                "i come across a cat.",
+                "i come across a robin.",
+                "i come across a rabbit"
+            ];
+
+            const word = [
+                "we look each other in the eye.",
+                "the moon stands still, yet waning.",
+                "the universe holds her breath.",
+                "a bead trickles down my brow.",
+                "our chests cave inwards.",
+            ];
+
+            const witness = [
+                "the tree beyond is a willow.",
+                "the tree beyond sways in the wind",
+                "the tree beyond glows yellow, resting over the streetlight.",
+                "the tree beyond has split its branches, a rip in the wall",
+                "the tree beyond witnesses."
+            ];
+
+            const attention = [
+                "what life? what path?",
+                "what spirit? what ancestor?",
+            "what leaf? what sun?",
+            "what soil? what ash?",
+            "what water? what tears?",
+            "what eye? what mind?"
+
+            ];
+
+            function lines(options) {
+                return options[Math.floor(Math.random()* options.length)];
+
+            }
+
+
+            const poemlines = [
+                lines(walking),
+                lines(friend),
+                lines(word),
+                lines(witness),
+                lines(attention),
+            ];
+
+            const poemDiv = document.getElementById("poem");
+            poemlines.forEach(line => {
+                const p= document.createElement("p");
+                p.className ="line";
+                p.textContent =line;
+                poemDiv.appendChild(p);
+            });
+
+        function showbox(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function hidebox(id) {
+      document.getElementById(id).style.display = 'none';
+    }    
+
+
+        </script>
+
+    </body>
+</html>
