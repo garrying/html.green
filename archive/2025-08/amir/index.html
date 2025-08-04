@@ -1,0 +1,80 @@
+<!-- YOHO! HTML DAY, FUN -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src=""></script>
+    <style>
+      .this {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
+      .damn {
+        width: 70%;
+        height: 50%;
+        border-radius: 5%;
+        box-shadow: inset 5px 3px 33px 8px #000000;
+        animation: changeshit 4s alternate infinite ease-in-out;
+        overflow: hidden;
+      }
+      iframe {
+        height: 100%;
+        width: 100%;
+      }
+      .wow {
+        text-transform: uppercase;
+        font-family: system-ui;
+        position: absolute;
+        left: 32%;
+        top: 8px;
+        margin: 0px;
+        font-size: 40px;
+        -webkit-text-stroke: white 1px;
+      }
+      ::selection {
+        background: #000000;
+      }
+      @keyframes changeshit {
+        0% {
+          border-radius: 0%;
+          transform: scale(1);
+          box-shadow: inset 10px 10px 100px 10px #000000;
+        }
+        50% {
+          transform: scale(1.6);
+          box-shadow: inset 10px 10px 500px 50px #000000;
+        }
+        100% {
+          border-radius: 100%;
+          transform: scale(0.2);
+          box-shadow: inset 25px 2px 10px 3px #000000;
+        }
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <p class="wow">Click when you feel complete</p>
+    <div class="this" onclick="myFunction()">
+      <div class="damn">
+        <!-- <iframe
+          src="https://www.earthcam.com/world/england/london/abbeyroad/?cam=abbeyroad_uk"
+          frameborder="0"
+        ></iframe> -->
+      </div>
+    </div>
+  </body>
+  <script>
+    function myFunction() {
+      confirm("Yooo, you are now COMPLETE!");
+    }
+  </script>
+</html>
