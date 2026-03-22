@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --background-color: oklch(98% 0.028 0deg);
+        --text-color: oklch(5% 0 0deg);
+        --transition-duration: 0.85s;
+        --padding-y: 10vh;
+        --padding-x: 5vw;
+      }
+
+      html,
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+
+        transition:
+          background-color 5s linear,
+          color 5s linear;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .main {
+        height: 100%;
+        padding: var(--padding-y) var(--padding-x);
+        font-size: 5vmax;
+        font-family:
+          "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+      }
+
+      .mono {
+        margin: 0;
+        font-size: 14px;
+        font-family: "SF Mono", SFMono-Regular, ui-monospace, monospace;
+        opacity: 0.33;
+        font-family: monospace;
+        color: var(--text-color);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .label {
+        position: absolute;
+        top: 2rem;
+        left: var(--padding-x);
+      }
+
+      .indicator {
+        position: absolute;
+        top: 2rem;
+        right: var(--padding-x);
+        mix-blend-mode: multiply;
+      }
+
+      .parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+
+      .line {
+        width: 100%;
+        text-align: center;
+        line-height: 1.2;
+      }
+
+      .line.alternating:nth-child(odd) {
+        text-align: left;
+        transform-origin: left;
+      }
+
+      .line.alternating:nth-child(even) {
+        text-align: right;
+        transform-origin: right;
+      }
+
+      .word {
+        display: inline-block;
+        transition:
+          opacity var(--transition-duration) ease-in-out,
+          filter var(--transition-duration) ease-in-out,
+          transform var(--transition-duration)
+            cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform: translateY(0%) scale(1);
+        backface-visibility: hidden;
+        will-change: transform, opacity, filter;
+        transform-style: preserve-3d;
+      }
+
+      .invisible {
+        opacity: 0;
+        transform: translateY(8%) scale(0.96);
+        transition:
+          opacity var(--transition-duration) ease-in-out,
+          transform var(--transition-duration) cubic-bezier(1, -0.4, 0.35, 0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <p class="indicator mono"></p>
+      <div class="parent"></div>
+    </div>
+    <script>
+      ;(() => {
+        const el = document.querySelector(".parent")
+        const poems = [
+          {
+            lines: [
+              // Someone feeding their dog, and forgetting
+              "What was I doing again?",
+              "Oh, that’s right… let’s get your food, Theo",
+              "You’re so excited! Sorry I made you wait.",
+              "I’m having a hard time remembering things these days",
+              "Wait — let me warm it up before I give it to you",
+            ],
+          },
+          {
+            alternatingLines: true,
+            lines: [
+              // What's something a sad moment where someone might forget what
+              // they were just saying?
+              "How’s little Benji doing these days?",
+              "We just talked about this, he started swimming lessons yesterday",
+              "Swimming lessons? Oh, that’s great! He’s growing up so fast",
+              "He really is…",
+              "You should call more often. It feels like we don't talk enough…",
+              "I know Mom, I know",
+            ],
+          },
+        ]
+        const delayFactor = 0.5
+        const trailingLines = 2
+        const lineDelay = 1600 * delayFactor
+
+        const backgroundColors = [
+          `oklch(98% 0.028 0deg)`,
+          `oklch(98% 0.028 84.6deg)`,
+          `oklch(98% 0.028 145deg)`,
+          `oklch(98% 0.028 225deg)`,
+          `oklch(98% 0.028 350deg)`,
+        ]
+        const textColors = [
+          `oklch(5% 0.5 0deg)`,
+          `oklch(8% 0.5 84.6deg)`,
+          `oklch(10% 0.5 145deg)`,
+          `oklch(7% 0.5 225deg)`,
+          `oklch(7% 0.5 350deg)`,
+        ]
+
+        let timerId = null
+
+        async function renderPoem(poem) {
+          el.innerHTML = ""
+          poem.lines.forEach((line, lineIndex) => {
+            const p = document.createElement("p")
+            p.classList.add("line")
+            if (poem.alternatingLines) {
+              p.classList.add("alternating")
+            }
+            p.innerHTML = line
+              .split(" ")
+              .map((word, wordIndex, ln) => {
+                const lineBiasDelay = 1000 / ln.length
+                let delay = Math.max(
+                  175,
+                  Math.floor(Math.random() * lineBiasDelay + 15 * word.length),
+                )
+                if (wordIndex === ln.length - 1) {
+                  // Delay the last word of the line
+                  delay += 200
+                }
+                const prevWord = ln[wordIndex - 1]
+                const delayPunctuation = [".", "…", "—", "?", ","]
+                if (
+                  prevWord &&
+                  delayPunctuation.some((p) => prevWord.endsWith(p))
+                ) {
+                  delay += 800
+                }
+                delay *= delayFactor
+                return `<span class="word invisible" data-line="${lineIndex}" data-delay="${delay}">${word}</span>`
+              })
+              .join(" ")
+            el.appendChild(p)
+          })
+
+          const lineCount = poem.lines.length
+          el.style.fontSize = `${15 / lineCount}vmax`
+
+          const lineElements = Array.from(el.querySelectorAll(".line"))
+          let i = 0
+          while (true) {
+            const prevLineElement = lineElements.at(i - trailingLines)
+            const currentLineElement = lineElements[i]
+            const tasks = []
+            if (prevLineElement) {
+              tasks.push(toggleLine(prevLineElement, false))
+            }
+            if (currentLineElement) {
+              tasks.push(toggleLine(currentLineElement, true))
+            }
+            document.documentElement.style.setProperty(
+              "--background-color",
+              backgroundColors[i % backgroundColors.length],
+            )
+            document.documentElement.style.setProperty(
+              "--text-color",
+              textColors[i % textColors.length],
+            )
+            await Promise.all(tasks)
+            await sleep(lineDelay)
+            i++
+            if (i >= lineCount + 2) {
+              i = 0
+            }
+          }
+        }
+
+        async function sleep(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms))
+        }
+
+        async function toggleLine(element, on) {
+          const wordsInLine = Array.from(element.querySelectorAll(`.word`))
+          for (const word of wordsInLine) {
+            const delay = Number.parseInt(word?.dataset.delay ?? 50, 10)
+            await sleep(delay)
+            word.classList.toggle("invisible", !on)
+          }
+        }
+
+        const idx = Math.floor(Math.random() * poems.length)
+        document.querySelector(".indicator").textContent =
+          `${idx + 1}/${poems.length}`
+        renderPoem(poems.at(idx))
+      })()
+    </script>
+  </body>
+</html>
