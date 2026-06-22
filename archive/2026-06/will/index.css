@@ -1,0 +1,26 @@
+
+body {
+  background-color: #44cc44;
+  color: #009900;
+  font-family: Arial Black;
+}
+
+ul {
+  font-size: 15px;
+  line-height: 11px;
+  margin-left: -28px;
+}
+
+img {
+  height: 260px;
+  margin: 10px;
+}
+
+.bold {
+  color: #007700;
+}
+
+
+.flexy {
+  display: flex;
+}
